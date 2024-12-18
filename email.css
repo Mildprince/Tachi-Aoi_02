@@ -1,0 +1,31 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #702082;
+}
+
+a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1vw;
+    text-decoration: none; 
+    color: #702082; 
+    margin: 10px; 
+}
+
+a:hover {
+    color: #444054;
+}
+
+h1 {
+    font-size: 2.5vw; 
+    text-align: center;
+}
