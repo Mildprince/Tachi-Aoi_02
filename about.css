@@ -1,6 +1,22 @@
 *{
     font-family: 'Noto Sans JP', sans-serif;
   }
+
+  :root {
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+    --step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
+    --step-7: clamp(4.0311rem, 3.36rem + 3.3555vw, 5.9605rem);
+    --step-8: clamp(4.8373rem, 3.9283rem + 4.5448vw, 7.4506rem);
+    --step-9: clamp(5.8048rem, 4.5844rem + 6.1017vw, 9.3132rem);
+    --step-10: clamp(6.9657rem, 5.3393rem + 8.1319vw, 11.6415rem);
+  }
   
   body{
     display: grid;
@@ -25,7 +41,7 @@ header{
   border-radius: 0;
   appearance: none;
   color:#444054;
-  font-size: 1vw;
+  font-size: var(--step-0);
 }
 
 #toggleButton:hover{
@@ -54,15 +70,6 @@ li{
 
 section{
     grid-area: 2 / 1 / span 1 / span 3; 
-}
-
-h1{
-    grid-area: 1 / 2 / span 1 / span 1;
-    font-size: 12vw;
-    justify-self: center;
-    align-self: center;
-    color: #702082;
-    margin: 40%, 0, 0, 0;
 }
 
 .logo{
@@ -96,7 +103,7 @@ a {
     color: #444054;
     padding: 10px 15px;
     display: block;
-    font-size: 1vw;
+    font-size: var(--step-0);
 }
 
 .list > li {
@@ -159,6 +166,7 @@ td{
     padding: 1.25rem;
     color: #444054;
     border-bottom: 1px solid #444054;
+    font-size: var(--step-0);   
 }
 
 .title{
@@ -186,11 +194,11 @@ td{
     margin: 0;
     color: #702082;
     padding-top:10%;
-    font-size: 3vw;
+    font-size: var(--step-3);
 }
 
 .message article p {
-    font-size: 1.25vw;
+    font-size: var(--step-0);
     width: 100%;
     padding-left: 10%;
     color: #444054;
@@ -217,23 +225,23 @@ td{
 
 .team h2 {
     color: #702082;
-    font-size: 8vw
+    font-size: var(--step-8);
 }
 
 .team h3 {
     color: #444054;
     padding: 1%;
-    font-size: 3vw;
+    font-size: var(--step-3);
 }
 
 .team strong{
     color: #702082;
-    font-size: 1.5vw;
+    font-size: var(--step-0);
 }
 
 .team p {
     color: #444054;
-    font-size: 1.5vw;
+    font-size: var(--step-0);
 }
 
 /*Our Logo*/
@@ -259,10 +267,11 @@ td{
     font-size: 3vw;
     padding-left: 10%;
     align-self: center;
+    font-size: var(--step-3);
 }
 
 .Text{
-    font-size: 1.25vw;
+    font-size: var(--step-0);
     width: 80%;
     color: #444054;
     padding-bottom: 10%;
@@ -312,7 +321,7 @@ address{
 /* Footer logo styling*/
 #footerLogo{
     grid-area: 1 / 3 / span 2 / span 1;
-    height: 40rem;
+    height: 30rem;
     width: auto;
     align-self: center;
     justify-self: center;
@@ -321,12 +330,13 @@ address{
 
 h3{
     display: block;
-    font-size: 2rem;
+    font-size: var(--step-2);
     color: #FFB7C5;
 }
 
 footer p{
     color: white;
+    font-size: var(--step-0);
 }
 
 /*Social Media Styling*/

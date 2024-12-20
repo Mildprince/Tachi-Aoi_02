@@ -1,6 +1,22 @@
 *{
     font-family: 'Noto Sans JP', sans-serif;
   }
+
+  :root {
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+    --step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
+    --step-7: clamp(4.0311rem, 3.36rem + 3.3555vw, 5.9605rem);
+    --step-8: clamp(4.8373rem, 3.9283rem + 4.5448vw, 7.4506rem);
+    --step-9: clamp(5.8048rem, 4.5844rem + 6.1017vw, 9.3132rem);
+    --step-10: clamp(6.9657rem, 5.3393rem + 8.1319vw, 11.6415rem);
+  }
   
   body{
     display: grid;
@@ -8,6 +24,7 @@
     padding: 0;
     grid-template: .5fr 1.5fr .25fr / 1% 200fr 1%;
     margin-bottom: 0;
+    font-size: var(--step-0)
   }
 
 /* Header Styling */
@@ -21,11 +38,10 @@ header{
   margin: 0;
   padding: 0;
   text-align: inherit;
-  font: inherit;
   border-radius: 0;
   appearance: none;
   color:#444054;
-  font-size: 1vw;
+  font-size: var(--step-0);
 }
 
 #toggleButton:hover{
@@ -67,7 +83,7 @@ section{
 
 h1{
     grid-area: 1 / 2 / span 1 / span 1;
-    font-size: 12vw;
+    font-size: var(--step-10);
     justify-self: center;
     align-self: center;
     color: #702082;
@@ -105,7 +121,7 @@ a {
     color: #444054;
     padding: 10px 15px;
     display: block;
-    font-size: 1vw;
+    font-size: var(--step-0);
 }
 
 .list > li {
@@ -170,13 +186,13 @@ main{
     padding-right: 10%;
 }
 .vision h2{
-    font-size: 8vw;
+    font-size: var(--step-8);
     margin: 0;
     color: #702082;
  }
 
 .vision p{
-    font-size: 2vw;
+    font-size: var(--step-2);
     margin: 0;
     text-align: right;
     color:#444054;
@@ -203,13 +219,13 @@ main{
     padding-left: 5%;
 }
 .mission h2{
-    font-size: 8vw;
+    font-size: var(--step-8);
     margin: 0;
     color: #FFB7C5;
 }
 
 .mission p{
-    font-size: 2vw;
+    font-size: var(--step-2);
     margin: 0;
     text-align: left;
     color:white;
@@ -225,12 +241,11 @@ main{
 
 .work h2{
   grid-area: 1 / 2 / span 1 / span 3;
-  font-size: 8vw;
-  margin: 0;
+  font-size: var(--step-8);
   color: #702082;
   justify-self: center;
-  margin-bottom: 2%;
-  margin-top: 2%;
+  margin: 3% 0 4% 0;
+
 }
 
 /*Mebuki Styling*/
@@ -258,23 +273,31 @@ section .mebuki{
   display: inline-block;
   grid-area: 2 / 1 / span 1 / span 1;
   justify-self: center;
-  font-size: 1.25vw;
+  font-size: var(--step-0);
+  color: #444054;
 }
 
-.mebuki button{
+.mebuki button {
   display: inline-block;
+  align-items: center;
+  justify-content: center;
   background-color: #444054;
   border: none;
   border-radius: 2rem;
   appearance: none;
   grid-area: 2 / 2 / span 1 / span 1;
-  height: 5vh;
-  width: 75%;
-  justify-self: center;
+  height: auto;
+  width: 85%;
+  padding: auto;
+  font-size: var(--step-0);
 }
 
 .mebuki a{
     color: white;
+}
+
+.mebuki button:hover {
+    background-color: #702082;
 }
 
 /*Yuzu Styling*/
@@ -302,23 +325,31 @@ section .yuzu{
   display: inline-block;
   grid-area: 2 / 1 / span 1 / span 1;
   justify-self: center;
-  font-size: 1.25vw;
+  font-size: var(--step-0);
+  color: #444054;
 }
 
 .yuzu button{
   display: inline-block;
+  align-items: center;
+  justify-content: center;
   background-color: #444054;
   border: none;
   border-radius: 2rem;
   appearance: none;
   grid-area: 2 / 2 / span 1 / span 1;
-  height: 5vh;
-  width: 75%;
-  justify-self: center;
+  height: auto;
+  width: 85%;
+  padding: auto;
+  font-size: var(--step-0);
 }
 
 .yuzu a{
     color: white;
+}
+
+.yuzu button:hover {
+    background-color: #702082;
 }
 
 /*Ecosystem Styling*/
@@ -346,23 +377,31 @@ section .ecosystem{
   display: inline-block;
   grid-area: 2 / 1 / span 1 / span 1;
   justify-self: center;
-  font-size: 1.25vw;
+  font-size: var(--step-0);
+  color: #444054;
 }
 
-.ecosystem button{
+.ecosystem button{ 
   display: inline-block;
+  align-items: center;
+  justify-content: center;
   background-color: #444054;
   border: none;
   border-radius: 2rem;
   appearance: none;
   grid-area: 2 / 2 / span 1 / span 1;
-  height: 5vh;
-  width: 75%;
-  justify-self: center;
+  height: auto;
+  width: 85%;
+  padding: auto;
+  font-size: var(--step-0);
 }
 
 .ecosystem a{
     color: white;
+}
+
+.ecosystem button:hover {
+    background-color: #702082;
 }
 
 /*Footer Styling*/
@@ -395,7 +434,7 @@ address{
 /* Footer logo styling*/
 #footerLogo{
     grid-area: 1 / 3 / span 2 / span 1;
-    height: 40rem;
+    height: 30rem;
     width: auto;
     align-self: center;
     justify-self: center;
@@ -404,12 +443,13 @@ address{
 
 h3{
     display: block;
-    font-size: 2rem;
+    font-size: var(--step-2);
     color: #FFB7C5;
 }
 
 footer p{
     color: white;
+    font-size: var(--step-0);
 }
 
 /*Social Media Styling*/
