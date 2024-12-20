@@ -6,7 +6,7 @@
     display: grid;
     margin: 0;
     padding: 0;
-    grid-template: 95px auto .15fr / 1% 200fr 1%;
+    grid-template: 95px auto auto auto .15fr / 1% 200fr 1%;
     margin-bottom: 0;
   }
 
@@ -134,15 +134,31 @@ a {
     color: #702082; 
 }
 
+/*Office Image Styling*/
+
+.office{
+    grid-area: 2 / 1 / span 1 / span 3;
+    width: 100%;
+}
+
+/*Our Programs Styling*/
+
+h1 {
+    grid-area: 3 / 2 / span 1 / span 1;
+    font-size: 8vw;
+    color: #702082;
+    justify-self: center;
+    align-items: center;
+}
+
 /*Main Styling*/
 main{
- grid-area: 2 / 2 / span 1 / span 1;
+ grid-area: 4 / 2 / span 1 / span 1;
  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
  display: grid;
  justify-items: center;
  align-items: center;
  row-gap: 5%;
- margin-top: 5%;
  margin-bottom: 15%;
 }
 
@@ -188,7 +204,7 @@ p{
 
 /*Footer Styling*/
 footer{
-    grid-area: 3 / 1 / span 1 / span 3;
+    grid-area: 5 / 1 / span 1 / span 3;
     background-color: #702082;
 }
 
