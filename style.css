@@ -2,6 +2,10 @@
     font-family: 'Noto Sans JP', sans-serif;
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
   :root {
     --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
     --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
@@ -55,7 +59,7 @@ a {
 
 #navigation{
   display: grid;
-  grid-template: 95px 1fr / 6fr minmax(50rem, 1rem)  1fr ;
+  grid-template: 95px 1fr / 6fr minmax(40rem, 1rem)  68px ;
   align-items: center;
 }
 
@@ -102,6 +106,10 @@ h1{
 #toggleButton{
     grid-area: 1 / 3 / 1 / span 1;
     justify-self: end;
+}
+
+#hamburgerIcon {
+    display: none; /* Hide the hamburger icon on larger screens */
 }
 
 /*Dropdown Menu Styling */
@@ -189,6 +197,7 @@ main{
     font-size: var(--step-8);
     margin: 0;
     color: #702082;
+    justify-self: end;
  }
 
 .vision p{
@@ -196,6 +205,9 @@ main{
     margin: 0;
     text-align: right;
     color:#444054;
+    width: 75%;
+    justify-self: end;
+    
  }
 
  /*Mission Section Styling*/
@@ -217,6 +229,7 @@ main{
 .mission article{
     grid-area: 1 / 2 / span 1 / span 1;
     padding-left: 5%;
+    z-index: 1; 
 }
 .mission h2{
     font-size: var(--step-8);
@@ -275,44 +288,46 @@ section .mebuki{
   justify-self: center;
   font-size: var(--step-0);
   color: #444054;
+  margin-left: 5%;
 }
 
 .mebuki button {
   display: inline-block;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-self: center;
   background-color: #444054;
   border: none;
   border-radius: 2rem;
   appearance: none;
   grid-area: 2 / 2 / span 1 / span 1;
   height: auto;
-  width: 85%;
+  min-width: 60%;
   padding: auto;
   font-size: var(--step-0);
 }
 
 .mebuki a{
     color: white;
+    font-size: var(--step--1);
 }
 
 .mebuki button:hover {
     background-color: #702082;
 }
 
-/*Yuzu Styling*/
-.yuzu{
+/*Yukyu Styling*/
+.yukyu{
     align-items: center;
     justify-content: center;
 }
 
-section .yuzu{
+section .yukyu{
   grid-area: 2 / 3 / span 1 / span 1;
   display: grid;
   grid-template: 1fr 10% / repeat(2, 1fr);
 }
 
-.yuzu img{
+.yukyu img{
   width: 25vw;
   display: block;
   justify-self: center;
@@ -321,34 +336,36 @@ section .yuzu{
   margin: 0;
 }
 
-.yuzu p{
+.yukyu p{
   display: inline-block;
   grid-area: 2 / 1 / span 1 / span 1;
   justify-self: center;
   font-size: var(--step-0);
   color: #444054;
+  margin-left: 5%;
 }
 
-.yuzu button{
+.yukyu button{
   display: inline-block;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-self: center;
   background-color: #444054;
   border: none;
   border-radius: 2rem;
   appearance: none;
   grid-area: 2 / 2 / span 1 / span 1;
   height: auto;
-  width: 85%;
+  min-width: 60%;
   padding: auto;
   font-size: var(--step-0);
 }
 
-.yuzu a{
+.yukyu a{
     color: white;
+    font-size: var(--step--1);
 }
 
-.yuzu button:hover {
+.yukyu button:hover {
     background-color: #702082;
 }
 
@@ -379,25 +396,26 @@ section .ecosystem{
   justify-self: center;
   font-size: var(--step-0);
   color: #444054;
+  margin-left: 5%;
 }
 
 .ecosystem button{ 
   display: inline-block;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-self: center;
   background-color: #444054;
   border: none;
   border-radius: 2rem;
   appearance: none;
   grid-area: 2 / 2 / span 1 / span 1;
   height: auto;
-  width: 85%;
-  padding: auto;
+  min-width: 60%;
   font-size: var(--step-0);
 }
 
 .ecosystem a{
     color: white;
+    font-size: var(--step--1);
 }
 
 .ecosystem button:hover {
@@ -477,4 +495,65 @@ ul.social-links li a img:hover {
     justify-self: end;
     align-self: end;
 }
+
+/*Mobile Media Querys*/
+@media (max-width: 768px) {
+
+    body{
+        display: grid;
+        margin: 0;
+        padding: 0;
+        grid-template: auto 1.5fr .25fr / 1% 200fr 1%;
+        margin-bottom: 0;
+        font-size: var(--step-0)
+      }
+
+    #navigation{
+        display: grid;
+        grid-template: 15% 64%/ 6fr 1fr  1fr ;
+        align-items: center;
+      }
+
+    #toggleButton{
+        grid-area: 1 / 2 / 1 / span 1;
+        justify-self: center;
+    }
+
+    video{
+        grid-area: 1 / 1 / span 1 / span 3;
+        height: auto;
+        object-fit: cover;
+        z-index: -100;
+    }
+
+    h1{
+        grid-area: 2 / 2 / span 1 / span 3;
+        font-size: var(--step-8);
+        justify-self: center;
+        align-self: center;
+        color: #702082;
+        margin: auto;
+        text-align: center;
+    }
+    
+
+    #hamburgerIcon {
+        display: block; /* Show the hamburger icon on smaller screens */
+        font-size: 2rem;
+        z-index: 1001;
+        color: #702082;
+        background: none;
+        border: none;
+        justify-self: center;
+        align-self: center;
+        grid-area: 1 / 3 / span 1 / span 1;
+
+    }
+
+    #navigation > ul {
+        visibility: hidden;
+    }
+
+}
+
 

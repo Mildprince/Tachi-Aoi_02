@@ -2,6 +2,10 @@
     font-family: 'Noto Sans JP', sans-serif;
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
   :root {
     --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
     --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);

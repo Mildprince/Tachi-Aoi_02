@@ -2,6 +2,10 @@
     font-family: 'Noto Sans JP', sans-serif;
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
   :root {
     --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
     --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
@@ -135,6 +139,8 @@ a {
 .dropdown a {
     color: #ffffff;
     padding: 10px;
+    background-color: transparent;
+    opacity: 1 !important;
 }
 
 .dropdown a:hover {
@@ -170,32 +176,32 @@ main{
  margin-bottom: 15%;
 }
 
-.mebuki{
+#mebuki{
     grid-area: 1 / 1 / span 1 / span 1;
     width: 75%;
 }
 
- .mebuki_image{
+ #mebuki_image{
     grid-area: 1 / 2 / span 1 / span 1;
     width: 30vw;
 }
 
-.yukyu{
+#yukyu{
     grid-area: 2 / 1 / span 1 / span 1;
     width: 75%;
 }
 
-.yukyu_image{
+#yukyu_image{
     grid-area: 2 / 2 / span 1 / span 1;
     width: 30vw;
 }
 
-.ecosystem{
+#ecosystem{
     grid-area: 3 / 1 / span 1 / span 1;
     width: 75%;
 }
 
-.ecosystem_image{
+#ecosystem_image{
     grid-area: 3 / 2 / span 1 / span 1;
     width: 30vw;
 }

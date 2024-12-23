@@ -2,6 +2,10 @@
     font-family: 'Noto Sans JP', sans-serif;
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
   :root {
     --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
     --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
@@ -150,7 +154,7 @@ main {
     row-gap: 1%;
 }
 
-.about{
+#about{
     grid-area: 1 / 2 / span 1 / span 1;
 
 }
@@ -174,7 +178,7 @@ td{
     width: 17%;
 }
 /*Message From Founder Styling*/
-.message{
+#message{
     grid-area: 2 / 2 / span 1 / span 1;
     display: grid;
     grid-template: auto / 1fr 1fr;
@@ -182,14 +186,14 @@ td{
     align-self: center;
 }
 
-.message article{
+#message article{
     grid-area: 1 / 1 / span 1 / span 1;
     justify-self: center;
     align-self: center;
     height: 100%;
 }
 
-.message article h3 {
+#message article h3 {
     padding-left: 10%;
     margin: 0;
     color: #702082;
@@ -197,7 +201,7 @@ td{
     font-size: var(--step-3);
 }
 
-.message article p {
+#message article p {
     font-size: var(--step-0);
     width: 100%;
     padding-left: 10%;
@@ -213,7 +217,7 @@ td{
 }
 
 /* Team Styling */
-.team{
+#team{
     grid-area: 3 / 2 / span 1 / span 1;
     justify-self: center;
     align-items: center;
@@ -223,23 +227,23 @@ td{
     margin-bottom: 10%;
 }
 
-.team h2 {
+#team h2 {
     color: #702082;
     font-size: var(--step-8);
 }
 
-.team h3 {
+#team h3 {
     color: #444054;
     padding: 1%;
     font-size: var(--step-3);
 }
 
-.team strong{
+#team strong{
     color: #702082;
     font-size: var(--step-0);
 }
 
-.team p {
+#team p {
     color: #444054;
     font-size: var(--step-0);
 }
@@ -261,17 +265,17 @@ td{
     align-items: center;
 }
 
-.Head {
+#Head {
     margin: 0;
     color: #702082;
     font-size: 3vw;
     padding-left: 10%;
     align-self: center;
-    font-size: var(--step-3);
+    font-size: var(--step-5);
 }
 
-.Text{
-    font-size: var(--step-0);
+#Text{
+    font-size: var(--step-2);
     width: 80%;
     color: #444054;
     padding-bottom: 10%;
@@ -282,10 +286,10 @@ td{
 
 
 
-.logo1 img {
+#logo1 img {
     grid-area: 1 / 1 / span 1 / span 1;
-    max-width: 25vw;
-    justify-self: start;
+    width: 80%;
+    justify-self: center;
     align-self: center;
 }
 
