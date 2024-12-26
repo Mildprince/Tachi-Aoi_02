@@ -48,6 +48,7 @@ header{
   appearance: none;
   color:#444054;
   font-size: var(--step-0);
+  z-index: 1002;
 }
 
 #toggleButton:hover{
@@ -113,8 +114,8 @@ h1{
     color:#702082;
 }
 
-#hamburgerIcon {
-    display: none; /* Hide the hamburger icon on larger screens */
+.hamburgerIcon {
+    display: none;
 }
 
 /*Dropdown Menu Styling */
@@ -554,23 +555,94 @@ main{
         text-align: center;
     }
     
+/*Hamburger Icon Styling*/
+  
+.hamburgerIcon{
+    grid-area: 1 / 2 / span 2 / span 2; /* Placed in the desired grid cell */
+    justify-self: end; /* Align to the end of the grid cell horizontally */
+    align-self: start; /* Center vertically */
+    z-index: 1001; /* Ensure it appears above other elements */ 
+    display: block !important;
+    font-size: var(--step--1);
+ }
+  
+  /* Hamburger */
+  .hamburger1 {
+    height: auto;
+    margin-top: 20%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    z-index: 120;
+    justify-self: end;
+  }
+  
+  .hamburger1 div {
+    background-color: #702082;
+    width: 40px;
+    height: 5px;
+    margin-top: 7px;
+  }
+  
+  #toggle1 {
+    display: none;
+  }
+  
+  #toggle1:checked + .hamburger1 .top {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  
+  #toggle1:checked ~ .menu1 {
+    height: auto;
+  }
+  
+  
+  /* Menu */
+  .menu1 {
+    height: 0;
+    background-color: white;
+    margin-top: 0;
+    display: grid;
+    grid-template-rows: 1fr repeat(4, auto);
+    grid-row-gap: 1%;
+    list-style: none;
+    clear: both;
+    text-align: center;
+    overflow: hidden;
+    grid-area: 1 / 3 / span 2 / span 1;
+    position: relative;
+    width: auto;
+  }
+  
+  .menu1 a:first-child {
+    margin-top: 10%;
+    
+  }
+  
+  .menu1 a:last-child {
+    margin-bottom: 2%;
+  }
+  
+  .link1 {
+    width: auto;
+    color: #444054;
+  }
 
-    #hamburgerIcon {
-        display: block; /* Show the hamburger icon on smaller screens */
-        font-size: 2rem;
-        z-index: 1001;
-        color: #702082;
-        background: none;
-        border: none;
-        justify-self: center;
-        align-self: center;
-        grid-area: 1 / 3 / span 1 / span 1;
+  .menu1 a {
+    font-size: 12px;
+    height: auto;
+    margin:auto;
+    width: auto;
+  }
+  
+  .menu1 a:hover {
+   color: #702082;
+  }
 
-    }
-
-    #navigation > ul {
-        visibility: hidden;
-    }
+  #navigation > ul {
+    visibility: hidden;
+  }
 
 /*Vision Section Styling*/
 .vision{
