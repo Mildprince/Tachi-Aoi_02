@@ -28,12 +28,14 @@ html {
     padding: 0;
     grid-template: .5fr 1.5fr .25fr / 1% 200fr 1%;
     margin-bottom: 0;
-    font-size: var(--step-0)
+    font-size: var(--step-0);
+    row-gap: 1%;
   }
 
 /* Header Styling */
 header{
   grid-area: 1 / 2 / span 1 / span 1;
+  height: auto;
 }
 
 #toggleButton{
@@ -59,7 +61,7 @@ a {
 
 #navigation{
   display: grid;
-  grid-template: 95px 1fr / 6fr minmax(40rem, 1rem)  68px ;
+  grid-template: 95px 45vw / 6fr minmax(40rem, 1rem)  68px ;
   align-items: center;
 }
 
@@ -91,7 +93,6 @@ h1{
     justify-self: center;
     align-self: center;
     color: #702082;
-    margin: 40%, 0, 0, 0;
 }
 
 .logo{
@@ -106,6 +107,10 @@ h1{
 #toggleButton{
     grid-area: 1 / 3 / 1 / span 1;
     justify-self: end;
+}
+
+#toggleButton:hover {
+    color:#702082;
 }
 
 #hamburgerIcon {
@@ -210,7 +215,7 @@ main{
     
  }
 
- /*Mission Section Styling*/
+/*Mission Section Styling*/
 .mission{
     grid-area: 2 / 1 / span 1 / span 3;
     display: grid;
@@ -499,18 +504,30 @@ ul.social-links li a img:hover {
 /*Mobile Media Querys*/
 @media (max-width: 768px) {
 
-    body{
-        display: grid;
-        margin: 0;
-        padding: 0;
-        grid-template: auto 1.5fr .25fr / 1% 200fr 1%;
-        margin-bottom: 0;
-        font-size: var(--step-0)
-      }
+body{
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template: auto auto auto/ 1% 200fr 1%;
+  margin-bottom: 0;
+  font-size: var(--step-0)
+    }
+
+header{
+  grid-area: 1 / 2 / 1 / span 1;
+  max-height: 200px;
+    }
+
+main{
+  grid-area: 2/ 1 / span 1 / span 3;
+  display: grid;
+  grid-template: repeat(2, auto) 2fr / 1% 1fr 1%;
+  row-gap: 2%;
+    }
 
     #navigation{
         display: grid;
-        grid-template: 15% 64%/ 6fr 1fr  1fr ;
+        grid-template: 15% 40vw/ 6fr 1fr  1fr ;
         align-items: center;
       }
 
@@ -524,15 +541,16 @@ ul.social-links li a img:hover {
         height: auto;
         object-fit: cover;
         z-index: -100;
+        margin:0;
     }
 
-    h1{
+     .Name h1{
         grid-area: 2 / 2 / span 1 / span 3;
         font-size: var(--step-8);
         justify-self: center;
         align-self: center;
         color: #702082;
-        margin: auto;
+        margin: 0 !important;
         text-align: center;
     }
     
@@ -554,6 +572,347 @@ ul.social-links li a img:hover {
         visibility: hidden;
     }
 
+/*Vision Section Styling*/
+.vision{
+    grid-area: 1 / 2 / span 1 / span 1; 
+    display: grid;
+    grid-template: repeat(2, 1fr) / 1fr;
+    align-items: center;
 }
+
+.vision img{
+    grid-area: 1 / 1 / span 1 / span 1;
+    width: 80%;
+
+}
+
+.vision article{
+    grid-area: 2 / 1 / span 1 / span 1;
+    justify-items: center;
+    align-items: center;
+    padding-right: 0;
+    align-self: center;
+    justify-self: center;
+}
+.vision h2{
+    font-size: var(--step-8);
+    color: #702082;
+    justify-self: center;
+ }
+
+.vision p{
+    font-size: var(--step-2);
+    margin: 0;
+    color:#444054;
+    justify-self: center;
+    text-align: center;  
+ }
+
+ /*Mission Section Styling*/
+.mission{
+    grid-area: 2 / 1 / span 1 / span 3;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 1% 1fr 1%;
+    align-items: center;
+    background-color: #702082;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+ }
+
+.mission img{
+    grid-area: 1 / 2 / span 1 / span 1;
+    width: 80%;
+    padding: 0;
+    justify-self: center;
+    margin-top: 5%;
+}
+
+.mission article{
+    grid-area: 2 / 2 / span 1 / span 1;
+    z-index: 1; 
+    justify-self: center;
+    padding: 0;
+    width: 80%;
+    margin-bottom: 10%;
+}
+.mission h2{
+    font-size: var(--step-8);
+    margin: 0;
+    color: #FFB7C5;
+}
+
+.mission p{
+    font-size: var(--step-2);
+   padding-bottom: 2%;
+    text-align: center;
+    color:white;
+    padding-bottom: 2%;
+}
+
+/* Work Styling*/
+.work{
+    display: grid;
+    grid-template: 1fr repeat(3, auto) 1fr / 1% 1fr 1%;
+    grid-area: 3 / 2 / span 1 / span 1;
+    margin-bottom: 7%;
+  }
+  
+  .work h2{
+    grid-area: 1 / 2 / span 1 / span 1;
+    font-size: var(--step-8);
+    color: #702082;
+    justify-self: center;
+    margin: 3% 0 4% 0;
+  
+  }
+  
+  /*Mebuki Styling*/
+  .mebuki{
+      align-items: center;
+      justify-content: center;
+  }
+  
+  section .mebuki{
+    grid-area: 2 / 2 / span 1 / span 1;
+    display: grid;
+    grid-template: 5fr repeat(2, 1fr) / 1fr ;
+  }
+  
+  .mebuki img{
+    width: 70%;
+    display: block;
+    justify-self: center;
+    align-self: start;
+    grid-area: 1 / 1 / span 1 / span 1;
+    margin: 0;
+  }
+  
+  .mebuki p{
+    display: inline-block;
+    grid-area: 2 / 1 / span 1 / span 1;
+    justify-self: center;
+    font-size: var(--step-0);
+    color: #444054;
+  }
+  
+  .mebuki button {
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+    background-color: #444054;
+    border: none;
+    border-radius: 2rem;
+    appearance: none;
+    grid-area: 3 / 1 / span 1 / span 1;
+    height: auto;
+    min-width: 30%;
+    padding: auto;
+    font-size: var(--step-0);
+  }
+  
+  .mebuki a{
+      color: white;
+      font-size: var(--step--1);
+  }
+  
+  .mebuki button:hover {
+      background-color: #702082;
+  }
+  
+  /*Yukyu Styling*/
+  .yukyu{
+      align-items: center;
+      justify-content: center;
+  }
+  
+  section .yukyu{
+    grid-area: 3 / 2 / span 1 / span 1;
+    display: grid;
+    grid-template: 5fr repeat(2, 1fr) / 1fr ;
+  }
+  
+  .yukyu img{
+    width: 70%;
+    display: block;
+    justify-self: center;
+    align-self: start;
+    grid-area: 1 / 1 / span 1 / span 1;
+    margin: 0;
+  }
+  
+  .yukyu p{
+    display: inline-block;
+    grid-area: 2 / 1 / span 1 / span 1;
+    justify-self: center;
+    font-size: var(--step-0);
+    color: #444054;
+  }
+  
+  .yukyu button{
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+    background-color: #444054;
+    border: none;
+    border-radius: 2rem;
+    appearance: none;
+    grid-area: 3 / 1 / span 1 / span 1;
+    height: auto;
+    min-width: 30%;
+    padding: auto;
+    font-size: var(--step-0);
+  }
+  
+  .yukyu a{
+      color: white;
+      font-size: var(--step--1);
+  }
+  
+  .yukyu button:hover {
+      background-color: #702082;
+  }
+  
+  /*Ecosystem Styling*/
+  .ecosystem{
+      align-items: center;
+      justify-content: center;
+      height: auto;
+  }
+  
+  section .ecosystem{
+    grid-area: 4 / 2 / span 1 / span 1;
+    display: grid;
+    grid-template: 5fr repeat(2, 1fr) / 1fr ;
+  }
+  
+  .ecosystem img{
+    width: 60%;
+    display: block;
+    justify-self: center;
+    align-self: start;
+    grid-area: 1 / 1 / span 1 / span 2;
+    margin: 0;
+  }
+  
+  .ecosystem p{
+    display: inline-block;
+    grid-area: 2 / 1 / span 1 / span 1;
+    justify-self: center;
+    font-size: var(--step-0);
+    color: #444054;
+  }
+  
+  .ecosystem button{ 
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+    background-color: #444054;
+    border: none;
+    border-radius: 2rem;
+    appearance: none;
+    grid-area: 3 / 1 / span 1 / span 1;
+    height: auto;
+    min-width: 30%;
+    padding: auto;
+    font-size: var(--step-0);
+  }
+  
+  .ecosystem a{
+      color: white;
+      font-size: var(--step--1);
+  }
+  
+  .ecosystem button:hover {
+      background-color: #702082;
+  }
+
+  /*Footer Styling*/
+footer{
+    grid-area: 3 / 1 / span 1 / span 3;
+    background-color: #702082;
+}
+
+address{
+    font-style: normal;
+}
+
+.footer{
+    display: grid;
+    grid-template: repeat(2,auto) / 1% repeat(3, 1fr) 1%;
+    grid-area: 2 / 2 / span 1 / span 1;
+    margin: 0;
+}
+
+.address{
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.phone{
+    grid-area: 2 / 2 / span 1 / span 1;
+    align-self: end;
+}
+
+/* Footer logo styling*/
+#footerLogo{
+    grid-area: 1 / 3 / span 2 / span 1;
+    height: 15rem;
+    width: auto;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+}
+
+h3{
+    display: block;
+    font-size: var(--step-0);
+    color: #FFB7C5;
+}
+
+footer p{
+    color: white;
+    font-size: var(--step--2);
+}
+
+/*Social Media Styling*/
+.socialMedia h3{
+    justify-self: end;
+}
+
+.social-links{
+    width: auto;
+}
+
+ul.social-links li {
+    display: inline-block;  /* Displays the items horizontally */
+}
+
+ul.social-links li a {
+    display: inline-block;
+    width: 1.5rem;  /* Adjust width for consistency */
+    height: auto; /* Adjust height for consistency */
+}
+
+ul.social-links li a img{
+    max-width: 100%;  /* Ensure images are responsive */
+    height: auto;
+}
+
+ul.social-links li a img:hover {
+    opacity: 50%;
+}
+
+.socialMedia{
+    grid-area: 2 / 4 / span 1 / span 1;
+    justify-self: end;
+    align-self: end;
+}
+  
+
+}
+
+
+
+
 
 
