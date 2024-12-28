@@ -35,6 +35,10 @@ header{
   grid-area: 1 / 2 / span 1 / span 1;
 }
 
+.hamburgerIcon{
+    display: none;
+}
+
 #toggleButton{
   background-color: transparent;
   border: none;
@@ -88,6 +92,7 @@ section{
 #toggleButton{
     grid-area: 1 / 3 / 1 / span 1;
     justify-self: end;
+    z-index: 1002;
 }
 
 /*Dropdown Menu Styling */
@@ -202,8 +207,8 @@ td{
 }
 
 #message article p {
-    font-size: var(--step-0);
-    width: 100%;
+    font-size: var(--step--1);
+    max-width: 100%;
     padding-left: 10%;
     color: #444054;
     padding-bottom: 10%;
@@ -211,7 +216,7 @@ td{
 
 #jim {
     grid-area: 1 / 2 / 2 / span 1;
-    max-width: 30vw;
+    max-width: 75%;
     justify-self: center;
     align-self: center;
 }
@@ -225,27 +230,41 @@ td{
     width: auto;
     height: auto;
     margin-bottom: 10%;
+    display: grid;
+    grid-template: 10% 1fr / 1fr 1fr;
+    justify-items: center;
+}
+
+#team1{
+    grid-area: 2 / 1 / span 1 / span 1;
+    align-self: start;
+}
+
+#team2{
+    grid-area: 2 / 2 / span 1 / span 1;
+    align-self: start;
 }
 
 #team h2 {
     color: #702082;
     font-size: var(--step-8);
+    grid-area: 1 / 1 / span 1 / span 2;
 }
 
 #team h3 {
     color: #444054;
     padding: 1%;
-    font-size: var(--step-3);
+    font-size: var(--step-5);
 }
 
 #team strong{
     color: #702082;
-    font-size: var(--step-0);
+    font-size: var(--step-2);
 }
 
 #team p {
     color: #444054;
-    font-size: var(--step-0);
+    font-size: var(--step-2);
 }
 
 /*Our Logo*/
@@ -254,7 +273,7 @@ td{
     display: grid;
     grid-template: auto / 1fr 1fr;
     justify-items: center;
-    align-items: center;
+    align-items: start;
     padding-bottom: 15%;
     padding-left: 0;
 }
@@ -280,20 +299,15 @@ td{
     color: #444054;
     padding-bottom: 10%;
     justify-self: center;
-    align-self: center;
+    
     padding-left: 0;
 }
-
-
 
 #logo1 img {
     grid-area: 1 / 1 / span 1 / span 1;
     width: 80%;
     justify-self: center;
-    align-self: center;
 }
-
-
 
 /*Footer Styling*/
 footer{
@@ -367,6 +381,410 @@ ul.social-links li a img:hover {
     grid-area: 2 / 4 / span 1 / span 1;
     justify-self: end;
     align-self: end;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        display: grid;
+        margin: 0;
+        padding: 0;
+        grid-template: 95px auto auto auto/ 1% 200fr 1%;
+        margin-bottom: 0;
+        font-size: var(--step-0)
+          }
+      
+      header{
+        grid-area: 1 / 2 / 1 / span 1;
+        max-height: 200px;
+        height: auto;
+          }
+      
+      main{
+        grid-area: 2/ 1 / span 1 / span 3;
+        display: grid;
+        grid-template: repeat(2, auto) 2fr / 1% 1fr 1%;
+        row-gap: 1%;
+          }
+      
+      #logoimg{
+        width: 10rem;
+        }
+      
+      #navigation{
+        display: grid;
+        grid-template: 15% 40vw/ 6fr 1fr  1fr ;
+        align-items: center;
+        }
+      
+      #navigation .logo{
+        padding-left:0;
+      }
+      
+          #toggleButton{
+              grid-area: 1 / 2 / 1 / span 1;
+              justify-self: center;
+          }
+      
+          video{
+              grid-area: 1 / 1 / span 1 / span 3;
+              height: auto;
+              object-fit: cover;
+              z-index: -100;
+              margin:0;
+          }
+      
+           .Name h1{
+              grid-area: 2 / 2 / span 1 / span 3;
+              font-size: var(--step-8);
+              justify-self: center;
+              align-self: center;
+              color: #702082;
+              margin: 0 !important;
+              text-align: center;
+          }
+          
+      /*Hamburger Icon Styling*/
+        
+      .hamburgerIcon{
+          grid-area: 1 / 2 / span 2 / span 2; /* Placed in the desired grid cell */
+          justify-self: end; /* Align to the end of the grid cell horizontally */
+          align-self: start; /* Center vertically */
+          z-index: 1001; /* Ensure it appears above other elements */ 
+          display: block;
+          font-size: var(--step--1);
+       }
+        
+        /* Hamburger */
+        .hamburger1 {
+          height: 40px;
+          margin-top: 20%;
+          display: grid;
+          grid-template-rows: repeat(3, 1fr);
+          justify-items: center;
+          z-index: 120;
+          justify-self: end;
+          align-self: center;
+        }
+        
+        .hamburger1 div {
+          background-color: #702082;
+          width: 35px;
+          height: 5px;
+          padding: 2%
+        }
+        
+        #toggle1 {
+          display: none;
+        }
+        
+        #toggle1:checked + .hamburger1 .top {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+        }
+        
+        #toggle1:checked ~ .menu1 {
+          height: auto;
+        }
+        
+        
+        /* Menu */
+        .menu1 {
+          height: 0;
+          background-color: white;
+          margin-top: 0;
+          display: grid;
+          grid-template-rows: 1fr repeat(4, auto);
+          grid-row-gap: 1%;
+          list-style: none;
+          clear: both;
+          text-align: center;
+          overflow: hidden;
+          grid-area: 1 / 3 / span 2 / span 1;
+          width: auto;
+        }
+        
+        .menu1 a:first-child {
+          margin-top: 10%;
+          
+        }
+        
+        .menu1 a:last-child {
+          margin-bottom: 2%;
+        }
+        
+        .link1 {
+          width: auto;
+          color: #444054;
+        }
+      
+        .menu1 a {
+          font-size: 12px;
+          height: auto;
+          margin:auto;
+          width: auto;
+        }
+        
+        .menu1 a:hover {
+         color: #702082;
+        }
+      
+        #navigation > ul {
+          visibility: hidden;
+        }
+
+/*main styling */
+main {
+    grid-area: 2 / 2 / span 1 / span 1;
+    display: grid;
+    grid-template: auto auto auto auto / 1fr;
+    height: auto;
+    row-gap: 1%;
+}
+
+#about{
+    grid-area: 1 / 2 / span 1 / span 1;
+
+}
+table { 
+    width: 95%;
+    justify-self: center;
+    margin-top: 5%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+td{
+    padding: 1.25rem;
+    color: #444054;
+    border-bottom: 1px solid #444054;
+    font-size: var(--step--2);   
+}
+
+.title{
+    color: #702082;
+    width: 17%;
+}
+
+/*Message From Founder Styling*/
+#message{
+    grid-area: 2 / 2 / span 1 / span 1;
+    display: grid;
+    grid-template: auto auto / 1fr;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+#message article{
+    grid-area: 1 / 1 / span 1 / span 1;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+}
+
+#message article h3 {
+    margin: 0;
+    color: #702082;
+    padding-top:10%;
+    font-size: var(--step-2);
+    padding: 0;
+}
+
+#message article p {
+    font-size: var(--step--2);
+    max-width: 100%;
+    color: #444054;
+    padding: 0 2%;
+}
+
+#jim {
+    grid-area: 2 / 1 / span 1 / span 1;
+    max-width: 75%;
+    justify-self: center;
+    align-self: center;
+    padding-top: 10%;
+}
+
+/* Team Styling */
+#team{
+    grid-area: 3 / 2 / span 1 / span 1;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-bottom: 10%;
+    display: grid;
+    grid-template: auto auto auto / 1fr ;
+    justify-items: center;
+}
+
+#team1{
+    grid-area: 2 / 1 / span 1 / span 1;
+    align-self: start;
+}
+
+#team2{
+    grid-area: 3 / 1 / span 1 / span 1;
+    align-self: start;
+}
+
+#team h2 {
+    color: #702082;
+    font-size: var(--step-4);
+    grid-area: 1 / 1 / span 1 / span 2;
+}
+
+#team h3 {
+    color: #444054;
+    padding: 1%;
+    font-size: var(--step-3);
+}
+
+#team strong{
+    color: #702082;
+    font-size: var(--step-0);
+}
+
+#team p {
+    color: #444054;
+    font-size: var(--step-0);
+}
+
+/*Our Logo*/
+#logo1 {
+    grid-area: 4 / 1 / span 1 / span 2;
+    display: grid;
+    grid-template: auto auto / 1fr;
+    justify-items: center;
+    align-items: start;
+    padding-bottom: 15%;
+    padding-left: 0;
+}
+
+.logo1 article{
+    grid-area: 1 / 1 / span 1 / span 1;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+#Head {
+    margin: 0;
+    color: #702082;
+    font-size: 3vw;
+    padding-left: 10%;
+    align-self: center;
+    font-size: var(--step-3);
+    text-align: center;
+    padding: 0;
+}
+
+#Text{
+    font-size: var(--step-0);
+    width: 80%;
+    color: #444054;
+    padding-bottom: 10%;
+    justify-self: center;
+    padding: 0;
+    text-align: center;
+}
+
+#logo1 img {
+    grid-area: 2 / 1 / span 1 / span 1;
+    width: 70%;
+    justify-self: center;
+    margin-bottom: 30%;
+}
+      
+/*Footer Styling*/
+footer{
+    grid-area: 3 / 1 / span 1 / span 3;
+    background-color: #702082;
+}
+
+address{
+    font-style: normal;
+}
+
+.footer{
+    display: grid;
+    grid-template: repeat(4,auto) / 1% 1fr 1%;
+    grid-area: 2 / 2 / span 1 / span 1;
+    margin: 0;
+}
+
+.address{
+    grid-area: 1 / 2 / span 1 / span 1;
+    text-align: center;
+    width: 75%;
+    justify-self: center;
+}
+
+.phone{
+    grid-area: 2 / 2 / span 1 / span 1;
+    text-align: center;
+
+}
+
+/* Footer logo styling*/
+#footerLogo{
+    grid-area: 4 / 2 / span 1 / span 1;
+    height: 15rem;
+    width: auto;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 5%;
+}
+
+h3{
+    display: block;
+    font-size: var(--step-0);
+    color: #FFB7C5;
+    text-align: center;
+}
+
+footer p{
+    color: white;
+    font-size: var(--step--2);
+    text-align: center;
+}
+
+/*Social Media Styling*/
+.socialMedia h3{
+    justify-self: center;
+}
+
+.social-links{
+    width: auto;
+}
+
+ul.social-links li {
+    display: inline-block;  /* Displays the items horizontally */
+}
+
+ul.social-links li a {
+    display: inline-block;
+    width: 1.5rem;  /* Adjust width for consistency */
+    height: auto; /* Adjust height for consistency */
+}
+
+ul.social-links li a img{
+    max-width: 100%;  /* Ensure images are responsive */
+    height: auto;
+}
+
+ul.social-links li a img:hover {
+    opacity: 50%;
+}
+
+.socialMedia{
+    grid-area: 3 / 2 / span 1 / span 1;
+    justify-self: center;
+    align-self: center;
+}
+
 }
 
 
