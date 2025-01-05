@@ -74,23 +74,24 @@
                 <li>
                     <a href="about.html">立葵について</a>
                     <ul class="dropdown">
-                        <li><a href="about.html#about">Organization</a></li>
-                        <li><a href="about.html#message">Message</a></li>
-                        <li><a href="about.html#team">Our Team</a></li>
-                        <li><a href="about.html#logo1">Our Logo</a></li>
+                        <li><a href="about.html#about">団体概要</a></li>
+                        <li><a href="about.html#message">代表メッセージ</a></li>
+                        <li><a href="about.html#team">メンバー紹介x</a></li>
+                        <li><a href="about.html#logo1">団体名・ロゴに込めた想い</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="programs.html">私たちの仕事</a>
+                    <a href="programs.html">活動内容</a>
                     <ul class="dropdown">
-                        <li><a href="programs.html#mebuki_image">Mebuki</a></li>
-                        <li><a href="programs.html#yukyu_image">Yukyu</a></li>
-                        <li><a href="programs.html#ecosystem_image">Ecosystem</a></li>
+                        <li><a href="programs.html#mebuki_image">芽吹（めぶき）</a></li>
+                        <li><a href="programs.html#yukyu_image">悠久（ゆうきゅう）</a></li>
+                        <li><a href="programs.html#ecosystem_image">女性活躍推進エコシステム</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="contact.html">お問い合せ</a>
+                    <a href="contact.html">お問い合わせ</a>
                 </li>
+            </ul>
             </ul>
             <button id="toggleButton">EN | JP</button>
         </nav>
@@ -98,7 +99,8 @@
     <img src="Images/Pagoda_01.jpg" class="pagoda">
     <!--Main-->
     <main>
-        <h2>CONTACT US</h2>
+        <h2 class="japaneseContent">お問い合わせ</h2>
+        <h2 class="englishContent" style="display: none;" >CONTACT US</h2>
         <form action="https://api.web3forms.com/submit" method="POST" class="japaneseContent">
 
             <!-- Replace with your Access Key -->
@@ -106,12 +108,12 @@
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
         
             <!-- Form Inputs. Each input must have a name="" attribute -->
-             <h4>名前</h4>
-            <input type="text" name="name" required placeholder="あなたの名前..">
-            <h4>Eメール</h4>
-            <input type="email" name="email" placeholder="あなたのメールアドレス.." >
-            <h4>主題</h4>
-            <textarea name="message" placeholder="何かを書く.." ></textarea>
+             <h4>お名前</h4>
+            <input type="text" name="name" required placeholder="例）田中　太郎">
+            <h4>メールアドレス</h4>
+            <input type="email" name="email" placeholder="example@tachi-aoi.jp" >
+            <h4>お問い合わせ内容</h4>
+            <textarea name="message" placeholder="お問い合わせ内容" ></textarea>
         
             <!-- Honeypot Spam Protection -->
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -119,7 +121,7 @@
             <!-- Custom Confirmation / Success Page -->
             <input type="hidden" name="redirect" value="email.html">
         
-            <button type="submit">申し出る</button>
+            <button type="submit">送信する</button>
         
         </form>
         <form action="https://api.web3forms.com/submit" method="POST" class="englishContent" style="display: none;">
@@ -153,41 +155,29 @@
             <address class="japaneseContent address">
                 <h3>住所</h3>
                 <p>
-                    一般社団法人 立葵<br>
+                    一般社団法人 立葵<br><br>
                     〒600-8009 京都府京都市下京区函谷鉾町101<br>
                     アーバンネット四条烏丸ビル6階・7階<br>
-                    電話番号:075-279-4334<br>
+                    電話番号: 075-279-4334<br>
                     <br>
                     361 Commonwealth Avenue, Chestnut Hill, Massachusetts 02467 USA<br>
-                    電話番号:+1 617 721-0400
+                    電話番号: +1 617-721-0400
                 </p>
-            </address>
-            <address  class="japaneseContent phone">
-                <h3>電話番号</h3>
-                <p>075-279-4334</p>
-                <p>+1 617 721-0400</p>
             </address>
             <address class="englishContent address" style="display: none;">
                 <h3>ADDRESS</h3>
                 <p>
-                    Ippan Shadanhōjin Tachi-Aoi<br>
+                    Ippan Shadanhōjin Tachi-Aoi<br><br>
                     6F/7F Urbannet Shijo Karasuma Building, 101 Kankobokochō, Shimogyo Ward<br>
                     Kyoto City, Kyoto Prefecture, JAPAN 606-8009<br>
                     Phone: 075-279-4334<br>
                     <br>
                     361 Commonwealth Avenue, Chestnut Hill, Massachusetts 02467 USA<br>
-                    Phone: +1 617 721-0400
+                    Phone: +1 617-721-0400
                 </p>
-            </address>
-            <address  class="englishContent phone" style="display: none;">
-                <h3>PHONE</h3>
-                <p>075-279-4334</p>
-                <p>+1 617 721-0400</p>
             </address>
             <img id="footerLogo" src="Images/Logo_-02.png" alt="white Tachi-Aoi logo">
             <nav class="socialMedia">
-                <h3 class="japaneseContent">ソーシャルメディア</h3>
-                <h3 class="englishContent" style="display: none;">SOCIAL MEDIA</h3>
                 <ul class="social-links">
                     <li>
                         <a href="https://www.facebook.com/TachiAoiJP" target="_blank"><img src="Images/Facebook_logo-01.png" alt="Facebook Logo"></a>

@@ -1,6 +1,6 @@
 *{
     font-family: 'Noto Sans JP', sans-serif;
-  }
+}
 
 html {
     scroll-behavior: smooth;
@@ -21,6 +21,7 @@ html {
     --step-9: clamp(5.8048rem, 4.5844rem + 6.1017vw, 9.3132rem);
     --step-10: clamp(6.9657rem, 5.3393rem + 8.1319vw, 11.6415rem);
   }
+
   
   body{
     display: grid;
@@ -78,6 +79,8 @@ ul{
 li{
     display: inline;  
 }
+
+
 
 video{
     grid-area: 1 / 1 / span 1 / span 3;
@@ -139,7 +142,7 @@ a {
     color: #444054;
     padding: 10px 15px;
     display: block;
-    font-size: var(--step-0);
+    font-size: var(--step--0);
 }
 
 .list > li {
@@ -157,7 +160,8 @@ a {
 }
 
 .dropdown li {
-    width: 150px; 
+    width: auto; 
+    font-size: var(--step--2);
 }
 
 .list > li > a:hover {
@@ -211,13 +215,12 @@ main{
  }
 
 .vision p{
-    font-size: var(--step-2);
+    font-size: var(--step-1);
     margin: 0;
     text-align: right;
     color:#444054;
-    width: 75%;
+    width: 100%;
     justify-self: end;
-    
  }
 
 /*Mission Section Styling*/
@@ -248,7 +251,7 @@ main{
 }
 
 .mission p{
-    font-size: var(--step-2);
+    font-size: var(--step-1);
     margin: 0;
     text-align: left;
     color:white;
@@ -444,25 +447,18 @@ address{
 
 .footer{
     display: grid;
-    grid-template: repeat(2,1fr) / 1% repeat(3, 1fr) 1%;
+    grid-template: 1fr 2fr/ 1% repeat(3, 1fr) 1%;
     grid-area: 2 / 2 / span 1 / span 1;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 .address{
-    grid-area: 1 / 2 / span 1 / span 1;
-}
-
-.phone{
     grid-area: 2 / 2 / span 1 / span 1;
-    align-self: end;
 }
 
 /* Footer logo styling*/
 #footerLogo{
     grid-area: 1 / 3 / span 2 / span 1;
-    height: 30rem;
+    height: 25rem;
     width: auto;
     align-self: center;
     justify-self: center;
@@ -504,6 +500,59 @@ ul.social-links li a img:hover {
     grid-area: 2 / 4 / span 1 / span 1;
     justify-self: end;
     align-self: end;
+}
+
+@media (max-width: 1080px) {
+
+  .vision p{
+    font-size: var(--step-0);
+    margin: 0;
+    text-align: right;
+    color:#444054;
+    width: 100%;
+    justify-self: end;
+    
+ }
+
+  .mission p{
+    font-size: var(--step-0);
+    margin: 0;
+    text-align: left;
+    color:white;
+}
+
+.mebuki p{
+  display: inline-block;
+  grid-area: 2 / 1 / span 1 / span 1;
+  justify-self: center;
+  font-size: var(--step--2);
+  color: #444054;
+  margin-left: 5%;
+}
+
+.yukyu p{
+  display: inline-block;
+  grid-area: 2 / 1 / span 1 / span 1;
+  justify-self: center;
+  font-size: var(--step--2);
+  color: #444054;
+  margin-left: 5%;
+}
+
+.ecosystem p{
+  display: inline-block;
+  grid-area: 2 / 1 / span 1 / span 1;
+  justify-self: center;
+  font-size: var(--step--2);
+  color: #444054;
+  margin-left: 5%;
+}
+
+footer p{
+  color: white;
+  font-size: var(--step--1);
+}
+  
 }
 
 /*Mobile Media Querys*/
@@ -696,7 +745,7 @@ main{
 .mission{
     grid-area: 2 / 1 / span 1 / span 3;
     display: grid;
-    grid-template:  1fr 2fr / 1% 1fr 1%;
+    grid-template: repeat(2, 1fr) / 1% 1fr 1%;
     align-items: center;
     background-color: #702082;
     align-items: center;
@@ -717,13 +766,14 @@ main{
     z-index: 1; 
     justify-self: center;
     padding: 0;
-    width: 80%;
+    width: 90%;
     margin-bottom: 10%;
 }
 .mission h2{
     font-size: var(--step-8);
     margin: 0;
     color: #FFB7C5;
+    justify-self: center;
 }
 
 .mission p{
@@ -732,6 +782,8 @@ main{
     text-align: center;
     color:white;
     padding-bottom: 2%;
+    width:100%
+
 }
 
 /* Work Styling*/
@@ -755,13 +807,13 @@ main{
   .mebuki{
       align-items: center;
       justify-content: center;
-      max-height: 90%;
+      max-height: 80%;
   }
   
   section .mebuki{
     grid-area: 2 / 2 / span 1 / span 1;
     display: grid;
-    grid-template: 5fr repeat(2, 1fr) / 1fr ;
+    grid-template: 4fr repeat(2, 1fr) / 1fr ;
   }
   
   .mebuki img{
@@ -779,6 +831,7 @@ main{
     justify-self: center;
     font-size: var(--step-0);
     color: #444054;
+    text-align: center;
   }
   
   .mebuki button {
@@ -809,13 +862,13 @@ main{
   .yukyu{
       align-items: center;
       justify-content: center;
-      max-height: 90%;
+      max-height: 80%;
   }
   
   section .yukyu{
     grid-area: 3 / 2 / span 1 / span 1;
     display: grid;
-    grid-template: 5fr repeat(2, 1fr) / 1fr ;
+    grid-template: 4fr repeat(2, 1fr) / 1fr ;
   }
   
   .yukyu img{
@@ -937,17 +990,12 @@ address{
 }
 
 .address{
-    grid-area: 1 / 2 / span 1 / span 1;
+    grid-area: 2 / 2 / span 1 / span 1;
     text-align: center;
     width: 75%;
     justify-self: center;
 }
 
-.phone{
-    grid-area: 2 / 2 / span 1 / span 1;
-    text-align: center;
-
-}
 
 /* Footer logo styling*/
 #footerLogo{
@@ -1040,7 +1088,27 @@ ul.social-links li a img:hover {
   align-self: center;
 }
 
+.mission p{
+  font-size: var(--step--1);
+ padding-bottom: 2%;
+  text-align: center;
+  color:white;
+  padding-bottom: 2%;
+  width:100%
+
 }
+
+.vision p{
+  font-size: var(--step--1);
+  margin: 0;
+  color:#444054;
+  justify-self: center;
+  text-align: center;  
+}
+
+}
+
+
 
 
 

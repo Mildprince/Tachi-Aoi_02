@@ -26,8 +26,9 @@ html {
     display: grid;
     margin: 0;
     padding: 0;
-    grid-template: 95px auto auto .15fr / 1% 200fr 1%;
+    grid-template: 95px auto auto auto / 1% 200fr 1%;
     margin-bottom: 0;
+    font-size: var(--step-0);
   }
 
 /* Header Styling */
@@ -63,7 +64,7 @@ a {
 
 #navigation{
   display: grid;
-  grid-template: 95px 1fr / 6fr minmax(50rem, 1rem)  1fr ;
+  grid-template: 95px 1fr / 6fr minmax(50rem, 1rem)  68px;
   align-items: center;
 }
 
@@ -112,7 +113,7 @@ a {
     color: #444054;
     padding: 10px 15px;
     display: block;
-    font-size: var(--step-0);
+    font-size: var(--step--0);
 }
 
 .list > li {
@@ -130,7 +131,8 @@ a {
 }
 
 .dropdown li {
-    width: 150px; 
+    width: auto; 
+    font-size: var(--step--2);
 }
 
 .list > li > a:hover {
@@ -154,13 +156,22 @@ a {
 main {
     grid-area: 2 / 2 / span 1 / span 1;
     display: grid;
-    grid-template: auto auto auto auto / 1fr;
+    grid-template: auto auto auto 65% auto / 1fr;
     height: auto;
     row-gap: 1%;
+    max-height: 60%;
+}
+
+h1{
+    color: #702082;
+    font-size: var(--step-6);
+    text-align: center;
+    grid-area: 1 / 2 / span 1/ span 1;
+    justify-self: center;
 }
 
 #about{
-    grid-area: 1 / 2 / span 1 / span 1;
+    grid-area: 2 / 2 / span 1 / span 1;
 
 }
 table { 
@@ -184,7 +195,7 @@ td{
 }
 /*Message From Founder Styling*/
 #message{
-    grid-area: 2 / 2 / span 1 / span 1;
+    grid-area: 3 / 2 / span 1 / span 1;
     display: grid;
     grid-template: auto / 1fr 1fr;
     justify-self: center;
@@ -223,15 +234,14 @@ td{
 
 /* Team Styling */
 #team{
-    grid-area: 3 / 2 / span 1 / span 1;
+    grid-area: 4 / 2 / span 1 / span 1;
     justify-self: center;
     align-items: center;
     text-align: center;
     width: auto;
-    height: auto;
-    margin-bottom: 10%;
+    max-height: 90%;
     display: grid;
-    grid-template: 10% 1fr / 1fr 1fr;
+    grid-template: 10% auto / 1fr 1fr;
     justify-items: center;
 }
 
@@ -242,7 +252,7 @@ td{
 
 #team2{
     grid-area: 2 / 2 / span 1 / span 1;
-    align-self: start;
+    align-self: start !important;
 }
 
 #team h2 {
@@ -269,12 +279,11 @@ td{
 
 /*Our Logo*/
 #logo1 {
-    grid-area: 4 / 1 / span 1 / span 2;
+    grid-area: 5 / 1 / span 1 / span 2;
     display: grid;
     grid-template: auto / 1fr 1fr;
     justify-items: center;
-    align-items: start;
-    padding-bottom: 15%;
+    align-items: center;
     padding-left: 0;
 }
 
@@ -290,12 +299,12 @@ td{
     font-size: 3vw;
     padding-left: 10%;
     align-self: center;
-    font-size: var(--step-5);
+    font-size: var(--step-4);
 }
 
 #Text{
-    font-size: var(--step-2);
-    width: 80%;
+    font-size: var(--step-1);
+    width: 100%;
     color: #444054;
     padding-bottom: 10%;
     justify-self: center;
@@ -311,8 +320,9 @@ td{
 
 /*Footer Styling*/
 footer{
-    grid-area: 4 / 1 / span 1 / span 3;
+    grid-area: 3 / 1 / span 1 / span 3;
     background-color: #702082;
+    height: 100%;
 }
 
 address{
@@ -321,25 +331,19 @@ address{
 
 .footer{
     display: grid;
-    grid-template: repeat(2,1fr) / 1% repeat(3, 1fr) 1%;
+    grid-template: 1fr 2fr / 1% repeat(3, 1fr) 1%;
     grid-area: 2 / 2 / span 1 / span 1;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+
 }
 
 .address{
-    grid-area: 1 / 2 / span 1 / span 1;
-}
-
-.phone{
     grid-area: 2 / 2 / span 1 / span 1;
-    align-self: end;
 }
 
 /* Footer logo styling*/
 #footerLogo{
     grid-area: 1 / 3 / span 2 / span 1;
-    height: 30rem;
+    height: 25rem;
     width: auto;
     align-self: center;
     justify-self: center;
@@ -381,6 +385,71 @@ ul.social-links li a img:hover {
     grid-area: 2 / 4 / span 1 / span 1;
     justify-self: end;
     align-self: end;
+}
+@media (max-width: 1080px){
+    td{
+        padding: 1.25rem;
+        color: #444054;
+        border-bottom: 1px solid #444054;
+        font-size: var(--step--1);   
+    }
+
+    #message article p {
+        font-size: var(--step--2);
+        max-width: 100%;
+        padding-left: 10%;
+        color: #444054;
+        padding-bottom: 10%;
+    }
+
+    #team h3 {
+        color: #444054;
+        padding: 1%;
+        font-size: var(--step-3);
+    }
+
+    #team strong{
+        color: #702082;
+        font-size: var(--step-0);
+    }
+    
+    #team p {
+        color: #444054;
+        font-size: var(--step-0);
+    }
+
+    #Head {
+        margin: 0;
+        color: #702082;
+        font-size: 3vw;
+        padding-left: 10%;
+        align-self: center;
+        font-size: var(--step-4);
+    }
+    
+    #Text{
+        font-size: var(--step-1);
+        width: 100%;
+        color: #444054;
+        padding-bottom: 10%;
+        justify-self: center;
+        
+        padding-left: 0;
+    }
+
+    main {
+        grid-area: 2 / 2 / span 1 / span 1;
+        display: grid;
+        grid-template: auto auto auto 65% auto / 1fr;
+        height: auto;
+        row-gap: 1%;
+        max-height: 53%;
+    }
+
+    footer p{
+        color: white;
+        font-size: var(--step--1)
+    }
 }
 
 @media (max-width: 768px) {
@@ -537,17 +606,25 @@ ul.social-links li a img:hover {
 main {
     grid-area: 2 / 2 / span 1 / span 1;
     display: grid;
-    grid-template: auto auto auto auto / 1fr;
+    grid-template: auto auto auto auto auto / 1fr;
     height: auto;
     row-gap: 1%;
 }
 
+h1{
+    color: #702082;
+    font-size: var(--step-4);
+    text-align: center;
+    grid-area: 1 / 2 / span 1/ span 1;
+    justify-self: center;
+}
+
 #about{
-    grid-area: 1 / 2 / span 1 / span 1;
+    grid-area: 2 / 2 / span 1 / span 1;
 
 }
 table { 
-    width: 95%;
+    width: 98%;
     justify-self: center;
     margin-top: 5%;
     border-collapse: collapse;
@@ -558,7 +635,7 @@ td{
     padding: 1.25rem;
     color: #444054;
     border-bottom: 1px solid #444054;
-    font-size: var(--step--2);   
+    font-size: .5rem;   
 }
 
 .title{
@@ -568,12 +645,13 @@ td{
 
 /*Message From Founder Styling*/
 #message{
-    grid-area: 2 / 2 / span 1 / span 1;
+    grid-area: 3 / 2 / span 1 / span 1;
     display: grid;
     grid-template: auto auto / 1fr;
     justify-self: center;
     align-self: center;
     text-align: center;
+    padding-top: 5%;
 }
 
 #message article{
@@ -608,7 +686,7 @@ td{
 
 /* Team Styling */
 #team{
-    grid-area: 3 / 2 / span 1 / span 1;
+    grid-area: 4 / 2 / span 1 / span 1;
     justify-self: center;
     align-items: center;
     text-align: center;
@@ -654,7 +732,7 @@ td{
 
 /*Our Logo*/
 #logo1 {
-    grid-area: 4 / 1 / span 1 / span 2;
+    grid-area: 5 / 1 / span 1 / span 2;
     display: grid;
     grid-template: auto auto / 1fr;
     justify-items: center;
@@ -683,7 +761,7 @@ td{
 
 #Text{
     font-size: var(--step-0);
-    width: 80%;
+    width: 100%;
     color: #444054;
     padding-bottom: 10%;
     justify-self: center;
@@ -784,6 +862,21 @@ ul.social-links li a img:hover {
     justify-self: center;
     align-self: center;
 }
+
+}
+
+@media (max-width: 768px) {
+
+    #Text{
+        font-size: var(--step--1);
+        width: 100%;
+        color: #444054;
+        padding-bottom: 10%;
+        justify-self: center;
+        padding: 0;
+        text-align: center;
+    }
+    
 
 }
 
