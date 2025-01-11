@@ -260,13 +260,14 @@ main{
  /* Work Styling*/
 .work{
   display: grid;
-  grid-template: 1fr 2fr / 1% repeat(3, 1fr) 1%;
+  grid-template: 1fr 2fr / 1% repeat(4, 1fr) 1%;
   grid-area: 3 / 2 / span 1 / span 1;
   margin-bottom: 7%;
+  justify-content: start;
 }
 
 .work h2{
-  grid-area: 1 / 2 / span 1 / span 3;
+  grid-area: 1 / 2 / span 1 / span 4;
   font-size: var(--step-8);
   color: #702082;
   justify-self: center;
@@ -278,20 +279,21 @@ main{
 .mebuki{
     align-items: center;
     justify-content: center;
+
 }
 
 section .mebuki{
   grid-area: 2 / 2 / span 1 / span 1;
   display: grid;
-  grid-template: 1fr 10% / repeat(2, 1fr);
+  grid-template: .75fr auto auto / auto;
 }
 
 .mebuki img{
-  width: 25vw;
+  width: 20vw;
   display: block;
   justify-self: center;
   align-self: start;
-  grid-area: 1 / 1 / span 1 / span 2;
+  grid-area: 1 / 1 / span 1 / span 1;
   margin: 0;
 }
 
@@ -302,6 +304,8 @@ section .mebuki{
   font-size: var(--step-0);
   color: #444054;
   margin-left: 5%;
+  text-align: center;
+  width: 100%;
 }
 
 .mebuki button {
@@ -312,7 +316,7 @@ section .mebuki{
   border: none;
   border-radius: 2rem;
   appearance: none;
-  grid-area: 2 / 2 / span 1 / span 1;
+  grid-area: 3 / 1 / span 1 / span 1;
   height: auto;
   min-width: 60%;
   padding: auto;
@@ -337,11 +341,11 @@ section .mebuki{
 section .yukyu{
   grid-area: 2 / 3 / span 1 / span 1;
   display: grid;
-  grid-template: 1fr 10% / repeat(2, 1fr);
+  grid-template: .75fr auto auto / 1fr;
 }
 
 .yukyu img{
-  width: 25vw;
+  width: 20vw;
   display: block;
   justify-self: center;
   align-self: start;
@@ -356,6 +360,7 @@ section .yukyu{
   font-size: var(--step-0);
   color: #444054;
   margin-left: 5%;
+  text-align: center;
 }
 
 .yukyu button{
@@ -366,7 +371,7 @@ section .yukyu{
   border: none;
   border-radius: 2rem;
   appearance: none;
-  grid-area: 2 / 2 / span 1 / span 1;
+  grid-area: 3 / 1 / span 1 / span 1;
   height: auto;
   min-width: 60%;
   padding: auto;
@@ -382,6 +387,61 @@ section .yukyu{
     background-color: #702082;
 }
 
+/*Research Styling*/
+.research{
+  align-items: center;
+  justify-content: center;
+}
+
+section .research{
+grid-area: 2 / 4 / span 1 / span 1;
+display: grid;
+grid-template: .75fr auto auto / 1fr;
+}
+
+.research img{
+width: 20vw;
+display: block;
+justify-self: center;
+align-self: start;
+grid-area: 1 / 1 / span 1 / span 2;
+margin: 0;
+}
+
+.research p{
+display: inline-block;
+grid-area: 2 / 1 / span 1 / span 1;
+justify-self: center;
+font-size: var(--step-0);
+color: #444054;
+margin-left: 5%;
+text-align: center;
+}
+
+.research button{
+display: inline-block;
+align-self: center;
+justify-self: center;
+background-color: #444054;
+border: none;
+border-radius: 2rem;
+appearance: none;
+grid-area: 3 / 1 / span 1 / span 1;
+height: auto;
+min-width: 60%;
+padding: auto;
+font-size: var(--step-0);
+}
+
+.research a{
+  color: white;
+  font-size: var(--step--1);
+}
+
+.research button:hover {
+  background-color: #702082;
+}
+
 /*Ecosystem Styling*/
 .ecosystem{
     align-items: center;
@@ -389,13 +449,13 @@ section .yukyu{
 }
 
 section .ecosystem{
-  grid-area: 2 / 4 / span 1 / span 1;
+  grid-area: 2 / 5 / span 1 / span 1;
   display: grid;
-  grid-template: 1fr 10% / repeat(2, 1fr);
+  grid-template: .75fr auto auto / 1fr;
 }
 
 .ecosystem img{
-  width: 25vw;
+  width: 20vw;
   display: block;
   justify-self: center;
   align-self: start;
@@ -410,6 +470,7 @@ section .ecosystem{
   font-size: var(--step-0);
   color: #444054;
   margin-left: 5%;
+  text-align: center;
 }
 
 .ecosystem button{ 
@@ -420,7 +481,7 @@ section .ecosystem{
   border: none;
   border-radius: 2rem;
   appearance: none;
-  grid-area: 2 / 2 / span 1 / span 1;
+  grid-area: 3 / 1 / span 1 / span 1;
   height: auto;
   min-width: 60%;
   font-size: var(--step-0);
@@ -439,6 +500,7 @@ section .ecosystem{
 footer{
     grid-area: 3 / 1 / span 1 / span 3;
     background-color: #702082;
+    padding-bottom:3%;
 }
 
 address{
@@ -504,6 +566,8 @@ ul.social-links li a img:hover {
 
 @media (max-width: 1080px) {
 
+  
+
   .vision p{
     font-size: var(--step-0);
     margin: 0;
@@ -519,6 +583,39 @@ ul.social-links li a img:hover {
     margin: 0;
     text-align: left;
     color:white;
+}
+
+.work{
+  display: grid;
+  grid-template: 1fr 2fr / 1% repeat(4, 1fr) 1%;
+  grid-area: 3 / 2 / span 1 / span 1;
+  margin-bottom: 7%;
+  justify-items: center;
+  align-items: center;
+}
+
+.mebuki{
+  align-items: center;
+  justify-content: center;
+  max-height: 75%;
+}
+
+.yukyu{
+  align-items: center;
+  justify-content: center;
+  max-height: 75%;
+}
+
+.research{
+  align-items: center;
+  justify-content: center;
+  max-height: 75%;
+}
+
+.ecosystem{
+  align-items: center;
+  justify-content: center;
+  max-height: 75%;
 }
 
 .mebuki p{
@@ -538,6 +635,16 @@ ul.social-links li a img:hover {
   color: #444054;
   margin-left: 5%;
 }
+
+.research p{
+  display: inline-block;
+  grid-area: 2 / 1 / span 1 / span 1;
+  justify-self: center;
+  font-size: var(--step--2);
+  color: #444054;
+  margin-left: 5%;
+  text-align: center;
+  }
 
 .ecosystem p{
   display: inline-block;
@@ -789,7 +896,7 @@ main{
 /* Work Styling*/
 .work{
     display: grid;
-    grid-template: 1fr repeat(3, auto) 1fr / 1% 1fr 1%;
+    grid-template: 1fr repeat(4, auto) 1fr / 1% 1fr 1%;
     grid-area: 3 / 2 / span 1 / span 1;
     margin-bottom: 7%;
   }
@@ -913,6 +1020,62 @@ main{
   .yukyu button:hover {
       background-color: #702082;
   }
+
+  /*Research Styling*/
+  .research{
+    align-items: center;
+    justify-content: center;
+    max-height: 80%;
+}
+
+section .research{
+  grid-area: 4 / 2 / span 1 / span 1;
+  display: grid;
+  grid-template: 4fr repeat(2, 1fr) / 1fr ;
+}
+
+.research img{
+  width: 70%;
+  display: block;
+  justify-self: center;
+  align-self: start;
+  grid-area: 1 / 1 / span 1 / span 1;
+  margin: 0;
+}
+
+.research p{
+  display: inline-block;
+  grid-area: 2 / 1 / span 1 / span 1;
+  justify-self: center;
+  font-size: var(--step-0);
+  color: #444054;
+  text-align: center;
+  margin-left: 0;
+}
+
+.research button{
+  display: inline-block;
+  align-self: center;
+  justify-self: center;
+  background-color: #444054;
+  border: none;
+  border-radius: 2rem;
+  appearance: none;
+  grid-area: 3 / 1 / span 1 / span 1;
+  height: auto;
+  min-width: 30%;
+  padding: auto;
+  font-size: var(--step-0);
+}
+
+.research a{
+    color: white;
+    font-size: var(--step--1);
+}
+
+.research button:hover {
+    background-color: #702082;
+}
   
   /*Ecosystem Styling*/
   .ecosystem{
@@ -923,7 +1086,7 @@ main{
   }
   
   section .ecosystem{
-    grid-area: 4 / 2 / span 1 / span 1;
+    grid-area: 5 / 2 / span 1 / span 1;
     display: grid;
     grid-template: 3fr repeat(2, 1fr) / 1fr ;
   }

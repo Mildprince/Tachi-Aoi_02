@@ -228,6 +228,7 @@ p{
 footer{
     grid-area: 5 / 1 / span 1 / span 3;
     background-color: #702082;
+    padding-bottom:3%;
 }
 
 address{
