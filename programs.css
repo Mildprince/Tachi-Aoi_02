@@ -26,7 +26,7 @@ html {
     display: grid;
     margin: 0;
     padding: 0;
-    grid-template: 95px auto auto auto auto auto / 1% 200fr 1%;
+    grid-template: 95px auto auto auto auto / 1% 200fr 1%;
     margin-bottom: 0;
     font-size: var(--step-0);
   }
@@ -173,11 +173,11 @@ h1 {
 /*Main Styling*/
 main{
  grid-area: 4 / 2 / span 1 / span 1;
- grid-template: repeat(3, 1fr) / 1fr 1fr;
+ grid-template: repeat(4, 1fr) / 1fr 1fr;
  display: grid;
  justify-items: center;
  align-items: center;
- row-gap: 5%;
+
  margin-bottom: 5%;
 }
 
@@ -188,7 +188,7 @@ main{
 
  #mebuki_image{
     grid-area: 1 / 2 / span 1 / span 1;
-    width: 30vw;
+    width: 25vw;
 }
 
 #yukyu{
@@ -198,17 +198,27 @@ main{
 
 #yukyu_image{
     grid-area: 2 / 2 / span 1 / span 1;
-    width: 30vw;
+    width: 25vw;
 }
 
-#ecosystem{
+#research{
     grid-area: 3 / 1 / span 1 / span 1;
     width: 75%;
 }
 
-#ecosystem_image{
+#research_image{
     grid-area: 3 / 2 / span 1 / span 1;
-    width: 30vw;
+    width: 25vw;
+}
+
+#ecosystem{
+    grid-area: 4 / 1 / span 1 / span 1;
+    width: 75%;
+}
+
+#ecosystem_image{
+    grid-area: 4 / 2 / span 1 / span 1;
+    width: 25vw;
 }
 
 h2{
@@ -309,20 +319,16 @@ ul.social-links li a img:hover {
         font-size: var(--step--2);
     }
 
-    #ecosystem{
-        grid-area: 3 / 1 / span 1 / span 1;
-        width: 85%;
-    }
 
     main{
         grid-area: 4 / 2 / span 1 / span 1;
-        grid-template: repeat(3, 1fr) / 2fr 1fr;
+        grid-template: repeat(5, 1fr)  / 2fr 1fr;
         display: grid;
         justify-items: center;
         align-items: center;
         row-gap: 5%;
         margin-bottom: 7%;
-        max-height: 50%;
+        max-height: 70%;
        }
     
 }
@@ -471,7 +477,7 @@ ul.social-links li a img:hover {
     /*Main Styling*/
 main{
     grid-area: 4 / 2 / span 1 / span 1;
-    grid-template: repeat(6, auto) / 1fr;
+    grid-template: repeat(8, auto) / 1fr;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -485,32 +491,42 @@ main img{
 }
    
    #mebuki{
-       grid-area: 2 / 1 / span 1 / span 1;
+       grid-area: 2 / 2 / span 1 / span 1;
        width: 75%;
    }
    
     #mebuki_image{
-       grid-area: 1 / 1 / span 1 / span 1;
+       grid-area: 1 / 2 / span 1 / span 1;
        width: 60%;
    }
    
    #yukyu{
-       grid-area: 4 / 1 / span 1 / span 1;
+       grid-area: 4 / 2 / span 1 / span 1;
        width: 75%;
    }
    
    #yukyu_image{
-       grid-area: 3 / 1 / span 1 / span 1;
+       grid-area: 3 / 2 / span 1 / span 1;
        width: 60%;
    }
+
+   #research{
+    grid-area: 6 / 2 / span 1 / span 1;
+    width: 75%;
+}
+
+#research_image{
+    grid-area: 5 / 2 / span 1 / span 1;
+    width: 60%;
+}
    
    #ecosystem{
-       grid-area: 6 / 1 / span 1 / span 1;
+       grid-area: 8 / 2 / span 1 / span 1;
        width: 75%;
    }
    
    #ecosystem_image{
-       grid-area: 5 / 1 / span 1 / span 1;
+       grid-area: 7 / 2 / span 1 / span 1;
        width: 60%;
    }
    
